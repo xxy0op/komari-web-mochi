@@ -35,7 +35,7 @@ const NodeDisplay: React.FC<NodeDisplayProps> = ({ nodes, liveData, forceShowTra
   const isMobile = useIsMobile();
   const [viewMode, setViewMode] = useLocalStorage<ViewMode>(
     "nodeViewMode",
-    "classic"
+    "modern"
   );
   
   // 确保 viewMode 总是有效值
