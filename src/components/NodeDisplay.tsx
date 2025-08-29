@@ -40,12 +40,12 @@ const NodeDisplay: React.FC<NodeDisplayProps> = ({ nodes, liveData, forceShowTra
   
   // 确保 viewMode 总是有效值
   const validViewModes: ViewMode[] = ["modern", "compact", "classic", "detailed", "task", "earth"];
-  const safeViewMode = validViewModes.includes(viewMode) ? viewMode : "modern";
+  const safeViewMode = validViewModes.includes(viewMode) ? viewMode : "classic";
   
   // 如果 viewMode 无效，设置为默认值
   useEffect(() => {
     if (!validViewModes.includes(viewMode)) {
-      setViewMode("modern");
+      setViewMode("classic");
     }
   }, [viewMode, setViewMode]);
   
